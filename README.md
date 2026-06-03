@@ -2,6 +2,10 @@
 
 一本从思想实验到协议、从源码到动手实现的开源PTP技术书。
 
+## 运行效果图
+<img width="1946" height="1165" alt="ptp_demo" src="https://github.com/user-attachments/assets/d6544ebd-833d-48e3-9830-e8b5e57791c3" />
+
+
 ## 项目简介
 
 本项目是一个完整的PTP（Precision Time Protocol，精确时间协议）技术教程，采用循序渐进的教学方式，带领读者从零开始掌握时间同步技术。全书分为四个章节：
