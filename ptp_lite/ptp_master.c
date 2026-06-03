@@ -13,7 +13,6 @@
 #include <arpa/inet.h>
 #include <net/if.h>
 #include "ptp_message.h"
-#include "ptp_servo.h"
 
 static ptp_port_identity_t master_port_id;
 static uint16_t sync_seq = 0;
@@ -207,7 +206,8 @@ int main(int argc, char *argv[])
             
             if (ret > (ssize_t)sizeof(ptp_header_t)) {
                 ptp_header_t *hdr = (ptp_header_t *)recv_buf;
-                if (hdr->message_type == PTP_MSG_DELAY_REQ) {
+                if (hdr->message_type == PTP_MSG_DELAY_REQ &&
+                    ret >= (ssize_t)sizeof(ptp_delay_req_msg_t)) {
                     handle_delay_req(fd, recv_buf, &client_addr);
                 }
             }

@@ -19,7 +19,6 @@ void ptp_init_header(ptp_header_t *hdr, uint8_t msg_type,
     hdr->correction_field = 0;
     
     memcpy(&hdr->source_port_identity, port_id, sizeof(ptp_port_identity_t));
-    hdr->source_port_identity.port_number = htobe16(port_id->port_number);
     hdr->sequence_id = htobe16(seq_id);
     hdr->log_message_interval = 0x7F;
 }
@@ -70,7 +69,6 @@ void ptp_init_delay_resp(ptp_delay_resp_msg_t *msg, uint16_t seq_id,
     
     memcpy(&msg->receive_timestamp, ts, sizeof(ptp_timestamp_t));
     memcpy(&msg->requesting_port_identity, req_port_id, sizeof(ptp_port_identity_t));
-    msg->requesting_port_identity.port_number = htobe16(req_port_id->port_number);
 }
 
 void ptp_init_announce(ptp_announce_msg_t *msg, uint16_t seq_id,

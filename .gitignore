@@ -1,0 +1,5 @@
+# Compiled binaries
+ptp_lite/ptp_master
+ptp_lite/ptp_slave
+ptp_lite/ptp_master_arm64
+ptp_lite/ptp_slave_arm64

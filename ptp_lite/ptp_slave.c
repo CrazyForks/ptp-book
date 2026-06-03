@@ -287,10 +287,12 @@ int main(int argc, char *argv[])
                     
                     switch (hdr->message_type) {
                     case PTP_MSG_SYNC:
-                        handle_sync((ptp_sync_msg_t *)recv_buf);
+                        if (ret >= (ssize_t)sizeof(ptp_sync_msg_t))
+                            handle_sync((ptp_sync_msg_t *)recv_buf);
                         break;
                     case PTP_MSG_DELAY_RESP:
-                        handle_delay_resp((ptp_delay_resp_msg_t *)recv_buf);
+                        if (ret >= (ssize_t)sizeof(ptp_delay_resp_msg_t))
+                            handle_delay_resp((ptp_delay_resp_msg_t *)recv_buf);
                         break;
                     }
                 }

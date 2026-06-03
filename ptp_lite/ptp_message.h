@@ -70,6 +70,14 @@ typedef struct {
     uint8_t  time_source;                    /* 1 byte */
 } __attribute__((packed)) ptp_announce_msg_t;
 
+/* 编译时验证结构体大小 */
+_Static_assert(sizeof(ptp_header_t) == 34, "Header size incorrect");
+_Static_assert(sizeof(ptp_sync_msg_t) == 44, "Sync size incorrect");
+_Static_assert(sizeof(ptp_follow_up_msg_t) == 44, "Follow_Up size incorrect");
+_Static_assert(sizeof(ptp_delay_req_msg_t) == 44, "Delay_Req size incorrect");
+_Static_assert(sizeof(ptp_delay_resp_msg_t) == 54, "Delay_Resp size incorrect");
+_Static_assert(sizeof(ptp_announce_msg_t) == 64, "Announce size incorrect");
+
 /* 函数声明 */
 void ptp_init_header(ptp_header_t *hdr, uint8_t msg_type, 
                      uint16_t seq_id, const ptp_port_identity_t *port_id);
