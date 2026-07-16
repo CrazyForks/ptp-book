@@ -2,7 +2,11 @@
 
 一本从思想实验到源码、从理论到动手实现的开源PTP技术书。
 
-### 实际运行效果
+## 在线阅读
+
+[📖 在线浏览本书](https://web-l.github.io/lularible-books/ptp-book/index.html)
+
+## 实际运行效果
 
 ![ptp_demo](https://github.com/user-attachments/assets/d6544ebd-833d-48e3-9830-e8b5e57791c3)
 
@@ -50,6 +54,12 @@ sudo ./ptp_slave eth0[替换为实际网卡名]
 - **[存储 技术书——在不可靠的硬件上构建可靠的数据家园](https://github.com/Lularible/storage-book)** — 一本关于存储技术演进与文件系统实现的深度技术书籍
 - **[UDS 技术书——从望闻问切到UDS协议实现](https://github.com/Lularible/uds-book)** — 一本从诊断元问题出发，直通ISO 14229协议规范与AUTOSAR DCM源码、再到亲手实现UDS栈的技术书
 - **[功能安全——ISO 26262分析与代码实现](https://github.com/Lularible/safety-book-iso26262)** — 以免疫系统为叙事线索的功能安全技术书。兼顾ISO 26262标准分析、源码拆解与动手实现
+
+## 致谢
+
+- 感谢 [@web-l](https://github.com/web-l) 构建并维护本系列的 [mdBook 在线阅读站](https://web-l.github.io/lularible-books/)，方便了大家阅读。
+
+---
 
 "汽车电子七部曲"是一个持续更新的系列——还有软件工程在打磨中。
 如果觉得这系列对你有用，不妨给个 ⭐ 关注进度。
